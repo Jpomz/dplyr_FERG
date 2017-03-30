@@ -138,7 +138,7 @@ filter(flights, month == 1 | month == 2 & distance > 1000 | distance < 500)
 ## Arrange rows with `arrange()`
 
 `arrange()` has a similar syntax as `filter()` but instead of filtering or selecting rows, it reorders them. It takes a data frame, and column name(s) to order by as arguments. The data will be arranged by the first column name provided, with ties being broken by subsequent columns:
-\newpage
+
 
 ```{r}
 # arrange by sched_dep_time
@@ -154,7 +154,7 @@ The default order is from smallest to largest, numeric to character, and a to z.
 arrange(flights, desc(sched_dep_time))
 arrange(flights, desc(sched_dep_time), dep_delay)
 ```
-\newpage
+
 
 `arrange()` is a straightforward wrapper around `order()` that requires less typing. The previous code is equivalent to:
 
@@ -181,7 +181,7 @@ This function works similarly to the `select` argument in `base::subset()`. The 
 
 There are a number of helper functions you can use within `select()`, like `starts_with()`, `ends_with()`, `matches()` and `contains()`. These let you quickly match larger blocks of variables that meet some criterion. See `?select` for more details.
 
-\newpage
+
 ## Add new columns with `mutate()`
 
 Data analysis often requires the creation of new variable columns based on values within your dataset. The `mutate()` function allows you to do this:
@@ -208,7 +208,7 @@ transform(flights,
 )
 #> Error: object 'gain' not found
 ```
-\newpage
+
 ## Summarise values with `summarise()`
 
 The last verb is `summarise()`. This collapses a dataframe to a single value, based on a function:
@@ -274,7 +274,7 @@ a4 <- filter(a3, arr > 30 | dep > 30)
 ```
 
 However this can lead to many problems. Giving objects appropriate names can be difficult (e.g. object names in ggplot example above). Or naming them chronologically (as above), it can be difficult to remember which object is which (was the summarized object a2 or a3?...). Especially if you want to do the same thing over and over on different data sets or subsets of observations. 
-\newpage
+
 Alternatively, if you don't want to save the intermediate results, you need to wrap the function calls inside each other:
 
 ```{r}
@@ -359,7 +359,7 @@ flights %>%
   select(dep_delay, distance, dest) %>%
   arrange(dep_delay)
 ```
-\newpage
+
 What carrier has the longest flights on average?
 
 ```{r}
@@ -404,7 +404,7 @@ flights %>%
   geom_point(aes(color = carrier, size = count), alpha = 0.5)
 ```
 Quick note, if you don't know where to find the .csv file you created in the example above, you can check your working directory with `getwd()`. This is also a good time to mention that if you're not already using projects in Rstudio, I highly recommend it. See Chapter 6 "Workflow: Projects" in *R for Data Science* for more information.  <http://r4ds.had.co.nz/workflow-projects.html/>
-\newpage
+
 
 # Two table verbs
 
