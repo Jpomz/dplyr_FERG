@@ -510,6 +510,8 @@ However, doing all of this in R allows you to leave clear signposts for exactly 
 This concludes the introdcution to the dplyr package. Hopefully it has given you a taste of the power and ease of using dplyr with tidy data, and provided you with enough resources to continue on and learn more if you need it. 
 
 ## Resources
+dplyr now has its own website! Work in progress as of 5 Apr 2017
+<http://dplyr.tidyverse.org/>
 
 dplyr vignettes
 `browseVignettes("dplyr")`
